@@ -14,6 +14,7 @@ v2ray_server_config_url=https://raw.githubusercontent.com/v2fly/v2ray-examples/r
 
 get_v2ray(){
     wget $v2ray_url
+    unzip -d v2ray `basename $v2ray_url`
 }
 
 get_v2ray_config(){
@@ -22,7 +23,7 @@ get_v2ray_config(){
 }
 
 modify_v2ray_config(){
-    
+    cat `basename $v2ray_client_config_url`
 }
 
 gen_ssh_tunnel(){
@@ -30,7 +31,7 @@ gen_ssh_tunnel(){
 }
 
 run_v2ray(){
-
+    ./v2ray --version
 }
 
 main(){
@@ -41,3 +42,5 @@ main(){
     gen_ssh_tunnel
     run_v2ray
 }
+
+main
