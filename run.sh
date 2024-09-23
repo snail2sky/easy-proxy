@@ -35,8 +35,8 @@ modify_v2ray_config(){
 }
 
 gen_ssh_tunnel(){
-    ssh -NfR 127.0.0.1:$ssh_tunnel_http_port:127.0.0.1:$ssh_tunnel_http_port $ssh_user@$ssh_host
-    ssh -NfR 127.0.0.1:$ssh_tunnel_sock_port:127.0.0.1:$ssh_tunnel_sock_port $ssh_user@$ssh_host
+    ssh -NfR $ssh_tunnel_http_port:127.0.0.1:$ssh_tunnel_http_port $ssh_user@$ssh_host
+    ssh -NfR $ssh_tunnel_sock_port:127.0.0.1:$ssh_tunnel_sock_port $ssh_user@$ssh_host
 }
 
 run_v2ray(){
