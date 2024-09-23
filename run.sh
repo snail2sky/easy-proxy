@@ -5,9 +5,11 @@ ssh_host=$2
 ssh_port=22
 ssh_tunnel_port=1081
 
-v2ray_url=
-v2ray_client_config_url=
-v2ray_server_config_url=
+arch=64
+v2ary_version=v5.19.0
+v2ray_url=https://github.com/v2fly/v2ray-core/releases/download/$v2ary_version/v2ray-linux-$arch.zip
+v2ray_client_config_url=https://raw.githubusercontent.com/v2fly/v2ray-examples/refs/heads/master/VMess-Websocket/config_client.json
+v2ray_server_config_url=https://raw.githubusercontent.com/v2fly/v2ray-examples/refs/heads/master/VMess-Websocket/config_server.json
 
 
 get_v2ray(){
