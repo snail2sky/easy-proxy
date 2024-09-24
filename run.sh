@@ -118,7 +118,7 @@ tail_log(){
 
 clean(){
     rm -vrf v2ray*
-    killall -v v2ray ssh
+    killall -v ssh
     exit 0
 }
 
